@@ -1,0 +1,22 @@
+{
+  "name": "3cw3_project",
+  "version": "1.0.0",
+  "description": "server backend for 3cw3 flutter application project",
+  "license": "ISC",
+  "author": "Thaksinh Manivanh",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.14.1",
+    "nodemon": "^3.1.10"
+  }
+}
