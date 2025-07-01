@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express();
 const port = 5000;
 // Import router
-const router_masterdata = require("./src/router/masterdata_router"); 
+const router_masterdata = require("./src/router/masterdata"); 
 const router_auth = require("./src/router/auth_user_router");
 
 // // Middleware to parse JSON bodies

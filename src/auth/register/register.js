@@ -1,7 +1,7 @@
 const connection = require('../../../connection/database_connection');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const key = "naphalai@888" 
+const secretkey = process.env.secretkey || "naphalai@888" 
 
 
 const registerUser = async (req, res) => {
@@ -29,7 +29,7 @@ const registerUser = async (req, res) => {
                     return res.status(500).json({ message: 'Database error', insertError });
                 }
 
-                const token = jwt.sign({ userId: insertResults.insertId }, key, { expiresIn: '1h' });
+                const token = jwt.sign({ userId: insertResults.insertId }, secretkey, { expiresIn: '1h' });
                 res.json({ token, userId: insertResults.insertId, username });
             });
         });
